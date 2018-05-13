@@ -35,6 +35,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Create Media Post 	|0x8d09| See website
 |Set Profile Avatar 	|0x8d10 	|Avatar URL/IPFS Hash (77 bytes)
 |Create Post in Community 	|0x8d11 	|Community name (Variable length bytes) - Longer the name, the shorter the message can be Message (74 - Community name length)
+|PostBlogHeader|0x8d12|BlogId(4), ChunksCount(2), Title(up to 67)
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
@@ -48,4 +49,6 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 <https://old.reddit.com/r/btc/comments/8hp21t/taggingmessaging_users_memocashblockpress/>
 
 <https://steemit.com/memo/@freetrade/memo-s-reputation-system-proposal>
+
+<https://www.yours.org/content/memo-protocol-proposal--message-grouping-8ade701318b1>
 
