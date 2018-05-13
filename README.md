@@ -23,7 +23,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Disclaim ID|0x6d23|service(4),identifier(72)|Disclaim ID allows a user to remove profiles from their identity.
 |Rating|0x6d24|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
 |User Rating|0x6d25|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
-|Geotag|0x6d25|lat(8),long(8),message| 
+|Geotag|0x6d26|lat(8),long(8),message| 
 |**BlockPress**|||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
 |Set Name 	|0x8d01 	|Text (77 Bytes)
 |Create Text Post 	|0x8d02 	|Text (77 Bytes)
