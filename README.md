@@ -4,7 +4,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 
 |Action|Prefix|Values|Notes
 |------|------|------|-----
-|**Memo**|| Protocol uses P2PKH addresses. Actions are saved using OP_RETURN. Message data is UTF-8 encoded
+|**Memo**||| Protocol uses P2PKH addresses. Actions are saved using OP_RETURN. Message data is UTF-8 encoded
 |Set name 	|0x6d01 	|name(77)
 |Post memo 	|0x6d02 	|message(77)
 |Reply to memo 	|0x6d03 	|txhash(30), message(45)
@@ -24,7 +24,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Rating|0x6d24|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
 |User Rating|0x6d25|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
 |Geotag|0x6d25|lat(8),long(8),message| 
-|**BlockPress**||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
+|**BlockPress**|||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
 |Set Name 	|0x8d01 	|Text (77 Bytes)
 |Create Text Post 	|0x8d02 	|Text (77 Bytes)
 |Reply to posts (+ other replies!) 	|0x8d03 	|Txhash (32 bytes) - Replying to tx Text (45 bytes) - Reply body
@@ -35,7 +35,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Create Media Post 	|0x8d09| See website
 |Set Profile Avatar 	|0x8d10 	|Avatar URL/IPFS Hash (77 bytes)
 |Create Post in Community 	|0x8d11 	|Community name (Variable length bytes) - Longer the name, the shorter the message can be Message (74 - Community name length)
-|**WEWO**||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
+|**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
 
