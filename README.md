@@ -42,13 +42,21 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 
 # Links:
 
-<https://wewo.cash/protocol/>
-
+Memo Official Protocol
 <https://memo.cash/protocol>
 
+Wewo Official Protocol
+<https://wewo.cash/protocol/>
+
+Proposal for tagging users and topics with 1 satoshi outputs
 <https://old.reddit.com/r/btc/comments/8hp21t/taggingmessaging_users_memocashblockpress/>
 
+Proposal for creating expanded identies and rating reputations 
 <https://steemit.com/memo/@freetrade/memo-s-reputation-system-proposal>
 
+Proposal for creating longer messages by grouping outputs together
 <https://www.yours.org/content/memo-protocol-proposal--message-grouping-8ade701318b1>
+
+Proposal for storing media on IPFS
+https://old.reddit.com/r/btc/comments/8jb0td/memocash_ipfs_based_media_support_with_no_changes/
 
