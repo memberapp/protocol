@@ -26,8 +26,7 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
 |Block user 	|0x6da6 	|address(35)
 |Unblock user 	|0x6da7 	|address(35)
-|Geotag|0x6da8|lat(8),long(8),message| 
-
+|Geotag|0x6da8|lat(8),long(8),message
 |**BlockPress**|||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
 |Set Name 	|0x8d01 	|Text (77 Bytes)
 |Create Text Post 	|0x8d02 	|Text (77 Bytes)
