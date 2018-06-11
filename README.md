@@ -12,18 +12,22 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Set profile text 	|0x6d05 	|message(77)
 |Follow user 	|0x6d06 	|address(35)
 |Unfollow user 	|0x6d07 	|address(35)
-|Set image base url 	|0x6d08 	|url(77) 	|Planned 	
-|Attach picture 	|0x6d09 	|txhash(20), imghash(20), url(34) 	|Planned 	
-|Set profile picture 	|0x6d0A 	|imghash(16), url(61) 	|Planned 	
-|Repost memo 	|0x6d0B 	|txhash(20), message(63) 	|Planned 	
-|Post topic message 	|0x6d0C 	|topic(variable), message(74 - topic length)
+|Set profile picture 	|0x6d0a 	|url(217) 	 	
+|Repost memo 	|0x6d0b 	|txhash(20), message(63) 	|Planned 	
+|Post topic message 	|0x6d0c 	|topic(variable), message(74 - topic length)
+|Create poll 	|0x6d10 	|poll_type(1), option_count(1), question(209) 	
+|Add poll option 	|0x6d13 	|poll_txhash(30), option(184) 	
+|Poll vote 	|0x6d14 	|poll_txhash(30), comment(184)
 |**Member**|
-|Assertion|0x6d21|address(35),message(31)|An Assertion says something about a Memo user - let's say 'Is Unbiased' might be a good assertion for a journalist. Users can make assertions about themselves or other users.
-|Claim ID|0x6d22|service(4),identifier(72)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity.
-|Disclaim ID|0x6d23|service(4),identifier(72)|Disclaim ID allows a user to remove profiles from their identity.
-|Rating|0x6d24|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
-|User Rating|0x6d25|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
-|Geotag|0x6d26|lat(8),long(8),message| 
+|Assertion|0x6da1|address(35),message(31)|An Assertion says something about a Memo user - let's say 'Is Unbiased' might be a good assertion for a journalist. Users can make assertions about themselves or other users.
+|Claim ID|0x6da2|service(4),identifier(72)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity.
+|Disclaim ID|0x6da3|service(4),identifier(72)|Disclaim ID allows a user to remove profiles from their identity.
+|Rating|0x6da4|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
+|User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
+|Block user 	|0x6da6 	|address(35)
+|Unblock user 	|0x6da7 	|address(35)
+|Geotag|0x6da8|lat(8),long(8),message| 
+
 |**BlockPress**|||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
 |Set Name 	|0x8d01 	|Text (77 Bytes)
 |Create Text Post 	|0x8d02 	|Text (77 Bytes)
