@@ -1,5 +1,5 @@
 # Microblogging Protocols
-Memo, Member, BlockPress, Wewo Protocol and Proposals
+Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 
 
 |Action|Prefix|Values|Notes
@@ -27,6 +27,9 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Block user 	|0x6da6 	|address(35)
 |Unblock user 	|0x6da7 	|address(35)
 |Geotag|0x6da8|lat(8),long(8),message
+|**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
+|PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
+|PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
 |**BlockPress**|||The Protocol uses P2PKH addresses and all actions are stored on-chain with OP_RETURN and data in payloads are UTF-8 encoded. 
 |Set Name 	|0x8d01 	|Text (77 Bytes)
 |Create Text Post 	|0x8d02 	|Text (77 Bytes)
@@ -39,9 +42,12 @@ Memo, Member, BlockPress, Wewo Protocol and Proposals
 |Set Profile Avatar 	|0x8d10 	|Avatar URL/IPFS Hash (77 bytes)
 |Create Post in Community 	|0x8d11 	|Community name (Variable length bytes) - Longer the name, the shorter the message can be Message (74 - Community name length)
 |PostBlogHeader|0x8d12|BlogId(4), ChunksCount(2), Title(up to 67)
-|**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
-|PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
-|PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
+|**Matter**|||P2PKH Bitcoin Cash addresses and actions are stored in transactions with OP_RETURN. All string payloads are UTF8 encoded.
+Create Post Header | 9d01 | sha256, chunkCount, title, tag1...tagN
+Create Post Chunk | 9d02 | postHeaderTxId, chunkId, contentBytes
+Set Profile Name | 9d03 | profileName
+Set Profile Image | 9d04 | profileImage
+Set Profile Bio | 9d05 | profileBio
 
 # Links:
 
@@ -50,6 +56,12 @@ Memo Official Protocol
 
 Wewo Official Protocol
 <https://wewo.cash/protocol/>
+
+BlockPress Official Protocol
+<https://www.blockpress.com/developers/blockpress-protocol>
+
+Matter Official Protocol
+<https://www.mttr.app/p/0777a0e61c1de4b7a39d85c1072413f382ca45bdf0f9c217d9ee7884b0c488f7>
 
 Proposal for tagging users and topics with 1 satoshi outputs
 <https://old.reddit.com/r/btc/comments/8hp21t/taggingmessaging_users_memocashblockpress/>
