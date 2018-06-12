@@ -27,6 +27,7 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Block user 	|0x6da6 	|address(35)
 |Unblock user 	|0x6da7 	|address(35)
 |Geotag|0x6da8|lat(8),long(8),message
+|Like post 	|0x6db4 	|txhash(30)
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
@@ -43,11 +44,11 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Create Post in Community 	|0x8d11 	|Community name (Variable length bytes) - Longer the name, the shorter the message can be Message (74 - Community name length)
 |PostBlogHeader|0x8d12|BlogId(4), ChunksCount(2), Title(up to 67)
 |**Matter**|||P2PKH Bitcoin Cash addresses and actions are stored in transactions with OP_RETURN. All string payloads are UTF8 encoded.
-Create Post Header | 9d01 | sha256, chunkCount, title, tag1...tagN
-Create Post Chunk | 9d02 | postHeaderTxId, chunkId, contentBytes
-Set Profile Name | 9d03 | profileName
-Set Profile Image | 9d04 | profileImage
-Set Profile Bio | 9d05 | profileBio
+Create Post Header | 0x9d01 | sha256, chunkCount, title, tag1...tagN
+Create Post Chunk | 0x9d02 | postHeaderTxId, chunkId, contentBytes
+Set Profile Name | 0x9d03 | profileName
+Set Profile Image | 0x9d04 | profileImage
+Set Profile Bio | 0x9d05 | profileBio
 
 # Links:
 
