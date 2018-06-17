@@ -23,11 +23,11 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Claim ID|0x6da2|service(4),identifier(72)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity.
 |Disclaim ID|0x6da3|service(4),identifier(72)|Disclaim ID allows a user to remove profiles from their identity.
 |Rating|0x6da4|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
-|User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating)
-|Block user 	|0x6da6 	|address(35)
-|Unblock user 	|0x6da7 	|address(35)
+|User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating) | Implemented on Member
+|Block user 	|0x6da6 	|address(35) | Implemented on Member
+|Unblock user 	|0x6da7 	|address(35) | Implemented on Member
 |Geotag|0x6da8|lat(8),long(8),message
-|Like post 	|0x6db4 	|txhash(30)
+|Dislike post 	|0x6db4 	|txhash(30) | Similar to Reddit Downvote Implemented on Member
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
