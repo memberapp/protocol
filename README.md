@@ -26,7 +26,7 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating) | Implemented on Member
 |Block user 	|0x6da6 	|address(35) | Implemented on Member
 |Unblock user 	|0x6da7 	|address(35) | Implemented on Member
-|Geotag|0x6da8|lat(8),long(8),message
+|Geotag|0x6da8|geohash(variable),message(up to 200) |  Implemented on Member. https://en.wikipedia.org/wiki/Geohash
 |Dislike post 	|0x6db4 	|txhash(30) | Similar to Reddit Downvote Implemented on Member
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
