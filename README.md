@@ -5,19 +5,22 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Action|Prefix|Values|Notes
 |------|------|------|-----
 |**Memo**||| Protocol uses P2PKH addresses. Actions are saved using OP_RETURN. Message data is UTF-8 encoded
-|Set name 	|0x6d01 	|name(77)
-|Post memo 	|0x6d02 	|message(77)
-|Reply to memo 	|0x6d03 	|txhash(30), message(45)
-|Like / tip memo 	|0x6d04 	|txhash(30)
-|Set profile text 	|0x6d05 	|message(77)
+|Set name 	|0x6d01 	|name(217)
+|Post memo 	|0x6d02 	|message(217)
+|Reply to memo 	|0x6d03 	|txhash(32), message(184)
+|Like / tip memo 	|0x6d04 	|txhash(32)
+|Set profile text 	|0x6d05 	|message(217)
 |Follow user 	|0x6d06 	|address(35)
 |Unfollow user 	|0x6d07 	|address(35)
 |Set profile picture 	|0x6d0a 	|url(217) 	 	
-|Repost memo 	|0x6d0b 	|txhash(20), message(63) 	|Planned 	
-|Post topic message 	|0x6d0c 	|topic(variable), message(74 - topic length)
+|Repost memo 	|0x6d0b 	|txhash(32), message(184) 	|Planned 	
+|Post topic message 	|0x6d0c 	|topic(variable), message(214 - topic length)
 |Create poll 	|0x6d10 	|poll_type(1), option_count(1), question(209) 	
-|Add poll option 	|0x6d13 	|poll_txhash(30), option(184) 	
-|Poll vote 	|0x6d14 	|poll_txhash(30), comment(184)
+|Add poll option 	|0x6d13 	|poll_txhash(32), option(184) 	
+|Poll vote 	|0x6d14 	|poll_txhash(32), comment(184)
+|Mute user 	|0x6d16 	|address(35)
+|Unmute user 	|0x6d17 	|address(35)
+|Send money 	|0x6d24 	|message(217)
 |**Member**|
 |Assertion|0x6da1|address(35),message(31)|An Assertion says something about a Memo user - let's say 'Is Unbiased' might be a good assertion for a journalist. Users can make assertions about themselves or other users.
 |Claim ID|0x6da2|service(4),identifier(72)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity.
