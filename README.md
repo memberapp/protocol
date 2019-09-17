@@ -22,15 +22,15 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Unmute user 	|0x6d17 	|address(35)
 |Send money 	|0x6d24 	|message(217)
 |**Member**|
-|Assertion|0x6da1|address(35),message(31)|An Assertion says something about a Memo user - let's say 'Is Unbiased' might be a good assertion for a journalist. Users can make assertions about themselves or other users.
-|Claim ID|0x6da2|service(4),identifier(72)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity.
-|Disclaim ID|0x6da3|service(4),identifier(72)|Disclaim ID allows a user to remove profiles from their identity.
-|Rating|0x6da4|txhash(20),byte(1),message(55)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)
-|User Rating|0x6da5|address(35),byte(1),message(40)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates  no rating (used for retraction of previous rating) | Implemented on Member
+|Assertion|0x6da1|address(35),message(181)|An Assertion says something about a Memo user - let's say 'Is Unbiased' might be a good assertion for a journalist. Users can make assertions about themselves or other users. (Planned)
+|Claim ID|0x6da2|service(4),identifier(212)|Claim ID allows a user to claim other profiles, like Twitter, Facebook etc as part of their identity. (Planned)
+|Disclaim ID|0x6da3|service(4),identifier(212)|Disclaim ID allows a user to remove profiles from their identity. (Planned)
+|Rating|0x6da4|txhash(32),message(184)|A Rating allows a user to give a score of between 1 and 255 to an assertion, or a ID Claim, (or any memo transaction), together with an optional message for feedback. A 0 rating indicates  no rating (used for retraction of previous rating)  (Planned)
+|User Rating|0x6da5|address(35),message(181)|User Rating allows a user to give another user an overall rating between 1 and 255. This might record a view on a user's overall suitability to participate. A 0 rating indicates no rating (used for retraction of previous rating) | Implemented on Member
 |Block user 	|0x6da6 	|address(35) | Implemented on Member
 |Unblock user 	|0x6da7 	|address(35) | Implemented on Member
-|Geotag|0x6da8|geohash(variable),message(up to 200) |  Implemented on Member. https://en.wikipedia.org/wiki/Geohash
-|Dislike post 	|0x6db4 	|txhash(30) | Similar to Reddit Downvote Implemented on Member
+|Geotag|0x6da8|geohash(variable),message(214-geohash length) |  Implemented on Member. https://en.wikipedia.org/wiki/Geohash
+|Dislike post 	|0x6db4 	|txhash(32) | Similar to Reddit Downvote Implemented on Member
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
