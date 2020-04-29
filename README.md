@@ -37,8 +37,8 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Unhide User	|0x6dc4	|address(20), topic(variable) | Implemented. See link above
 |Hide Post	|0x6dc5	|txid(32) | Implemented. See link above
 |Unhide Post	|0x6dc6	|txid(32) | Implemented. See link above
-|Start Encrypted Message 	|0x6dd0 	|message(217) |Implemented. Start a new message, encrypted with public key. An additional stamp output should be included in the transaction to indicate the recipient.
-|Continue Encrypted Message 	|0x6dd1 	|txhash(32), message(184)|Continue the encrypted message from the previously referenced transaction
+|Start Encrypted Message 	|0x6dd0 	|encrypted message fragment(217) |Implemented. Start a new message, encrypted with public key. An additional stamp output should be included in the transaction to indicate the recipient.
+|Continue Encrypted Message 	|0x6dd1 	|txhash(32), encrypted message fragment(184)|Continue the encrypted message from the previously referenced transaction
 |**WEWO**|||Protocol uses P2PKH addresses. Actions are saved using OP_RETURN.
 |PostBlogHeader|0x7701|BlogId(4), ChunksCount(2), Title(up to 67)
 |PostBlogContent|0x7702|BlogId(4), ChunkIndex(2), Content(up to 67)
