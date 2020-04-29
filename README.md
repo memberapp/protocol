@@ -66,6 +66,9 @@ Set Profile Bio | 0x9d05 | profileBio
 Memo Official Protocol
 <https://memo.cash/protocol>
 
+Memo Improvement Proposals
+https://github.com/memocash/mips
+
 Wewo Official Protocol
 <https://wewo.cash/protocol/>
 
