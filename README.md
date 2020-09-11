@@ -13,7 +13,7 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Follow user 	|0x6d06 	|address(20)
 |Unfollow user 	|0x6d07 	|address(20)
 |Set profile picture 	|0x6d0a 	|url(217) 	 	
-|Repost memo 	|0x6d0b 	|txhash(32), message(184) 	|Planned 	
+|Repost memo 	|0x6d0b 	|txhash(32), message(184) 	|Planned. Implemented on Member as 're-member'	
 |Post topic message 	|0x6d0c 	|topic(variable), message(214 - topic length)
 |Create poll 	|0x6d10 	|poll_type(1), option_count(1), question(209) 	
 |Add poll option 	|0x6d13 	|poll_txhash(32), option(184) 	
