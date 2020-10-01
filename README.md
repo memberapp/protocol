@@ -17,6 +17,7 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Post topic message 	|0x6d0c 	|topic(variable), message(214 - topic length)
 |Topic follow 	|0x6d0d 	|topic(variable)
 |Topic unfollow 	|0x6d0e 	|topic(variable)
+|Quote Repost   |0x6d0f 	|txhash(32), topic(variable), message(179 - topic length) 	|Memo/Member Joint Proposal	
 |Create poll 	|0x6d10 	|poll_type(1), option_count(1), question(209) 	
 |Add poll option 	|0x6d13 	|poll_txhash(32), option(184) 	
 |Poll vote 	|0x6d14 	|poll_txhash(32), comment(184)
