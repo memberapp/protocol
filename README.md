@@ -33,6 +33,7 @@ Memo, Member, BlockPress, Wewo, Matter Protocol and Proposals
 |Block user 	|0x6da6 	|address(20) | Implemented on Member
 |Unblock user 	|0x6da7 	|address(20) | Implemented on Member
 |Geotag|0x6da8|geohash(variable),message(214-geohash length) |  Implemented on Member. https://en.wikipedia.org/wiki/Geohash
+|Pin post 	|0x6da9 	|txhash(32) | Pin Post To Profile Implemented on Member
 |Dislike post 	|0x6db4 	|txhash(32) | Similar to Reddit Downvote Implemented on Member
 |Designate Moderator	|0x6dc1	|address(20), topic(variable) |  Implemented. https://github.com/memberapp/memberapp.github.io/issues/134
 |Dismiss Moderator	|0x6dc2	|address(20), topic(variable) | Implemented. See link above
